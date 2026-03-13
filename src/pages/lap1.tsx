@@ -1,6 +1,8 @@
 import { Layout } from "antd";
 
-import UserTable from "./table";
+import { UserTable } from "./danhsach";
+
+
 
 const { Header, Content, Footer } = Layout;
 
@@ -13,7 +15,7 @@ export default function Page() {
 
 
             </Content>
-            <Footer>Footer</Footer>
+            <Footer></Footer>
         </Layout>
     );
 }

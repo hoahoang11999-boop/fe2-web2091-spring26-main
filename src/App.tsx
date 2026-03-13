@@ -1,6 +1,9 @@
-import { Toaster } from "react-hot-toast";
-import { Link } from "react-router-dom";
-import Page from "./pages/lap1";
+
+import { Link, Route, Routes } from "react-router-dom";
+
+import LoginForm from "./pages/login";
+import { UserTable } from "./pages/danhsach";
+import LogoutForm from "./pages/logout";
 
 
 function App() {
@@ -25,10 +28,10 @@ function App() {
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
-            <Link to="#" className="hover:text-gray-200">
+            <Link to="/login" className="hover:text-gray-200">
               Đăng nhập
             </Link>
-            <Link to="#" className="hover:text-gray-200">
+            <Link to="/logout" className="hover:text-gray-200">
               Đăng ký
             </Link>
           </div>
@@ -40,9 +43,14 @@ function App() {
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB2091</h1>
 
       </div>
+      <Routes>
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/list" element={<UserTable />} />
+        <Route path="/logout" element={<LogoutForm />} />
+      </Routes>
 
-      <Toaster />
-      <Page />
+
+
 
 
     </>
