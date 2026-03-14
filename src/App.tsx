@@ -4,6 +4,9 @@ import { Link, Route, Routes } from "react-router-dom";
 import LoginForm from "./pages/login";
 import { UserTable } from "./pages/danhsach";
 import LogoutForm from "./pages/logout";
+import LogiForm from "./lap3/form";
+import AddProduct from "./lap3/thembai3";
+import Dashbood from "./trangchu/dashbood";
 
 
 function App() {
@@ -16,7 +19,7 @@ function App() {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="#" className="hover:text-gray-200">
+            <Link to="/dashbood" className="hover:text-gray-200">
               Trang chủ
             </Link>
             <Link to="/list" className="hover:text-gray-200">
@@ -24,6 +27,9 @@ function App() {
             </Link>
             <Link to="/add" className="hover:text-gray-200">
               Thêm mới
+            </Link>
+            <Link to="/lap3" className="hover:text-gray-200">
+              lap3
             </Link>
           </div>
 
@@ -43,16 +49,15 @@ function App() {
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB2091</h1>
 
       </div>
+      {/* viết router  */}
       <Routes>
+        <Route path="/dashbood" element={<Dashbood />} />
+        <Route path="/add" element={<AddProduct />} />
+        <Route path="/lap3" element={<LogiForm />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/list" element={<UserTable />} />
         <Route path="/logout" element={<LogoutForm />} />
       </Routes>
-
-
-
-
-
     </>
   );
 }
