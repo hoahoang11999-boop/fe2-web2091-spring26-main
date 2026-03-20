@@ -1,4 +1,20 @@
 {
-  "products": [],
-  "users": []
+  "stories": [
+    {
+      "id": 2,
+      "title": "One Piece",
+      "author": "Oda",
+      "description": "Vua hải tặc",
+      "image": "https://via.placeholder.com/150",
+      "date": "2026-03-20T11:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "Dragon Ball",
+      "author": "Toriyama",
+      "description": "7 viên ngọc rồng",
+      "image": "https://via.placeholder.com/150",
+      "date": "2026-03-20T12:00:00.000Z"
+    }
+  ]
 }

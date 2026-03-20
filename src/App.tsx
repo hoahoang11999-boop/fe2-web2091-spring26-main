@@ -8,6 +8,7 @@ import LogiForm from "./lap3/form";
 import AddProduct from "./lap3/thembai3";
 import Dashbood from "./trangchu/dashbood";
 import { StoryForm } from "./lap4/lap4";
+import StoryList from "./lap5/lap5";
 
 
 
@@ -36,6 +37,9 @@ function App() {
             <Link to="/lap4" className="hover:text-gray-200">
               lap4
             </Link>
+            <Link to="/lap5" className="hover:text-gray-200">
+              lap5
+            </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
@@ -63,6 +67,7 @@ function App() {
         <Route path="/list" element={<UserTable />} />
         <Route path="/logout" element={<LogoutForm />} />
         <Route path="/lap4" element={<StoryForm />} />
+        <Route path="/lap5" element={<StoryList />} />
       </Routes>
     </>
   );
